@@ -1,0 +1,59 @@
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[project]
+name = "task1"
+version = "0.1.0"
+description = "Code for Task 1 of the ClimateCheck 2026 competition"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "codecarbon>=3.2.2",
+    "datasets>=2.16",
+    "flagembedding>=1.2",
+    "json-repair>=0.57.1",
+    "nltk>=3.9.2",
+    "pandas>=2.0",
+    "pyarrow>=23.0.0",
+    "rank-bm25>=0.2.2",
+    "requests>=2.32.5",
+    "scikit-learn>=1.8.0",
+    "sentence-transformers>=3.0",
+    "torch>=2.0",
+    "tqdm>=4.67.3",
+    "transformers==4.44.2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.1",
+    "ty>=0.0.17",
+]
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle (error)
+    "F", # pyflakes
+    "B", # bugbear
+    "B9",
+    "C4", # flake8-comprehensions
+    "SIM", # flake8-simplify
+    "I", # isort
+    "UP", # pyupgrade
+    "PIE", # flake8-pie
+    "PGH", # pygrep-hooks
+    "PYI", # flake8-pyi
+    "RUF",
+]
+
+ignore = [
+    # Only relevant if running a script with `python -0`
+    "B011",
+    # Leave it to the formatter to split long lines
+    "E501"
+]
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]
+combine-as-imports = true
