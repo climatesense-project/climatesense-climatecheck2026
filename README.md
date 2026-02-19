@@ -12,3 +12,7 @@ This repository contains the code for the ClimateSense team's participation in t
 | **Task 1.1** (retrieval) - mean(Recall@5, B‑Pref) | **0.466** | 0.431 |
 | **Task 1.2** (verification) - F1 + Recall@5 | **1.183** | 1.082 |
 | **Task 2** (narrative classification) - Macro F1 | **0.583** | 0.514 |
+
+## License
+
+The code in this repository is licensed under the [MIT License](LICENSE). The data used in the competition is subject to its own licensing terms, as specified by the competition organizers. Please refer to the competition website for details on data usage and licensing.
